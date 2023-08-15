@@ -1,7 +1,7 @@
 -- List all tables in the specified database
 
 /* Connect to the MySQL server using the provided credentials */
-USE `NormanDee`;
+USE `mysql`;
 
 /* List all tables in the specified database */
 SHOW TABLES;
