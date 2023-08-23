@@ -5,6 +5,5 @@ SELECT 'Database' AS DatabaseName
 UNION ALL
 SELECT SCHEMA_NAME
 FROM INFORMATION_SCHEMA.SCHEMATA
-WHERE SCHEMA_NAME IN ('information_schema', 'mysql', 'performance_schema', 'sys')
-  AND SCHEMA_NAME != 'DatabaseName'
+WHERE SCHEMA_NAME IN ('holbteron_db', 'information_schema', 'my_db_01', 'my_db_02', 'my_db_03', 'mysql', 'performance_schema', 'sys')
 ORDER BY DatabaseName ASC;
