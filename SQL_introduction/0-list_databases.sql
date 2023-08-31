@@ -1,7 +1,7 @@
 -- List all databases on the MySQL server
 
 /* Connect to the MySQL server using the provided credentials */
-SELECT 'Database'
+SELECT  DatabaseName AS 'Database'
 UNION ALL
 SELECT SCHEMA_NAME
 FROM INFORMATION_SCHEMA.SCHEMATA
