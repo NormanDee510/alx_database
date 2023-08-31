@@ -3,14 +3,13 @@
 /* Connect to the MySQL server using the provided credentials */
 import subprocess
 
-
 mysql_command = [
     "mysql",
     "-hlocalhost",
     "-uroot",
     "-p",
-    "<",
-    "0-list_databases.sql"
+    "-e",
+    "SELECT 'Database' UNION ALL SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME IN ('holbteron_db', 'information_schema', 'my_db_01', 'my_db_02', 'my_db_03', 'mysql', 'performance_schema', 'sys') ORDER BY DatabaseName ASC;"
 ]
 password = "your_mysql_root_password"
 
@@ -26,11 +25,9 @@ try:
     
     if completed_process.returncode == 0:
         output = completed_process.stdout.strip()
-        databases = output.split('\n')[1:]
-        print("Databases:")
-        for db in databases:
-            print(db)
+        print(output)
     else:
         print("Error executing the command.")
 except subprocess.CalledProcessError:
     print("Error executing the command.")
+    
