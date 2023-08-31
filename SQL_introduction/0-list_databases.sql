@@ -3,7 +3,15 @@
 /* Connect to the MySQL server using the provided credentials */
 import subprocess
 
-mysql_command = "mysql -hlocalhost -uroot -p < 0-list_databases.sql"
+
+mysql_command = [
+    "mysql",
+    "-hlocalhost",
+    "-uroot",
+    "-p",
+    "<",
+    "0-list_databases.sql"
+]
 password = "your_mysql_root_password"
 
 # Using subprocess to execute the command and capture the output
