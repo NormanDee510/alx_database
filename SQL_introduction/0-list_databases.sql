@@ -1,6 +1,3 @@
--- List all databases on the MySQL server
-
-/* Connect to the MySQL server using the provided credentials */
 import subprocess
 
 mysql_command = [
@@ -30,4 +27,3 @@ try:
         print("Error executing the command.")
 except subprocess.CalledProcessError:
     print("Error executing the command.")
-    
