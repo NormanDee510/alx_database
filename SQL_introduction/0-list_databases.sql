@@ -1,7 +1,7 @@
 -- List all databases on the MySQL server
 
 /* Connect to the MySQL server using the provided credentials */
-mysql -hlocalhost -uroot -p -N -e SELECT 'Database' AS DatabaseName  
+SELECT 'Database' AS DatabaseName  
 UNION ALL
 SELECT SCHEMA_NAME
 FROM INFORMATION_SCHEMA.SCHEMATA
