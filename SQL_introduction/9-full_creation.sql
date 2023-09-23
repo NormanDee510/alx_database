@@ -1,9 +1,5 @@
 -- Create table second_table and insert multiple rows
 
-/* Connect to the specified database using the provided credentials */
-USE `hbtn_0c_0`;
-
-/* Create second_table if it doesn't exist */
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
